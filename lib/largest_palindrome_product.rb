@@ -1,18 +1,11 @@
 def largest_palindrome_product
-  num_1 = 99
- 
   palindromes = []
-  until num_1 == 0
-    num_2 = num_1 - 1
-    while num_2 > 0
-      product = num_1 * num_2
-      possible_palindrome = check_if_palindrome(product)
-      if possible_palindrome == true
-        palindromes << product
+  99.downto(10) do |num_1|
+    num_1.downto(10) do |num_2|
+      if check_if_palindrome(num_1 * num_2)
+        palindromes << (num_1 * num_2)
       end
-      num_2 -= 1
     end
-    num_1 -= 1
   end
   largest_palindrome = palindromes.max
 end
