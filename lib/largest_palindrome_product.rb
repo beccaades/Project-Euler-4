@@ -7,7 +7,7 @@ def largest_palindrome_product
       end
     end
   end
-  largest_palindrome = palindromes.max
+  palindromes.max
 end
 
 def check_if_palindrome(product)
